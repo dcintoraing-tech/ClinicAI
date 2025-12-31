@@ -3,6 +3,27 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
+const ToothIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M11.2 5.2a1.6 1.6 0 0 0-2.4 0l-.5.5c-2.4 2.4-2.4 6.3 0 8.7l.5.5a1.6 1.6 0 0 0 2.4 0l.5-.5c.8-.8.8-2 0-2.8l-2.2-2.2c-.8-.8-2-2-2.8 0L6 10" />
+    <path d="M12.8 5.2a1.6 1.6 0 0 1 2.4 0l.5.5c2.4 2.4 2.4 6.3 0 8.7l-.5.5a1.6 1.6 0 0 1-2.4 0l-.5-.5c-.8-.8-.8-2 0-2.8l2.2-2.2c.8-.8 2-2 2.8 0L18 10" />
+    <path d="m15.5 13.5 1-1" />
+    <path d="m8.5 13.5-1-1" />
+    <path d="M12 18.5c-2 0-4-1-4-4h8c0 3-2 4-4 4Z" />
+  </svg>
+);
+
 const Header = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-image');
 
@@ -19,7 +40,10 @@ const Header = () => {
         />
       )}
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-4 md:px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 md:px-6">
+        <div className="mb-4 rounded-full bg-primary/20 p-4 text-white">
+          <ToothIcon className="h-10 w-10" />
+        </div>
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
           ClinicAI
         </h1>
