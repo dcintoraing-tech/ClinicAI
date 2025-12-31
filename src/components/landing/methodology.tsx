@@ -42,22 +42,22 @@ const Methodology = () => {
       </div>
       <div className="relative mt-12">
         <div
-          className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-border md:block"
+          className="absolute left-1/2 top-4 hidden h-[calc(100%-2rem)] w-0.5 -translate-x-1/2 bg-border md:block"
           aria-hidden="true"
         />
-        <div className="space-y-12">
+        <div className="space-y-12 md:space-y-0">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center md:flex-row md:justify-center"
+              className="relative flex flex-col items-center md:flex-row md:items-start md:space-y-0"
             >
               <div
-                className={`flex w-full items-center md:w-1/2 ${
+                className={`flex w-full items-center text-center md:w-1/2 md:text-left ${
                   index % 2 === 0 ? 'md:justify-end md:pr-8' : 'md:justify-start md:pl-8'
                 }`}
               >
                 <div
-                  className={`w-full rounded-lg bg-card p-6 shadow-lg md:max-w-md ${
+                  className={`w-full max-w-md rounded-lg bg-card p-6 shadow-lg ${
                     index % 2 === 0 ? 'md:order-1' : 'md:order-2'
                   }`}
                 >
@@ -65,14 +65,11 @@ const Methodology = () => {
                   <p className="mt-2 text-muted-foreground">{step.description}</p>
                 </div>
               </div>
-              <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl">
-                  {step.icon}
-                </div>
+
+              <div className="z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl my-4 md:my-0 md:absolute md:left-1/2 md:top-0 md:-translate-x-1/2">
+                {step.icon}
               </div>
-               <div className="flex md:hidden mt-4 h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl">
-                  {step.icon}
-                </div>
+
               <div
                 className={`hidden w-1/2 md:block ${
                   index % 2 === 0 ? 'md:order-2' : 'md:order-1'

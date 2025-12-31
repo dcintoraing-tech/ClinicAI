@@ -1,8 +1,7 @@
-
 import Benefits from '@/components/landing/benefits';
 import Conclusion from '@/components/landing/conclusion';
 import Header from '@/components/landing/header';
-import InteractiveDemo from '@/components/landing/interactive-demo';
+import InteractiveTour from '@/components/landing/interactive-tour';
 import Justification from '@/components/landing/justification';
 import Methodology from '@/components/landing/methodology';
 import Objectives from '@/components/landing/objectives';
@@ -16,14 +15,14 @@ const Page = () => {
     <>
       <Header />
       <ProblemStatement />
-      <Objectives />
       <Justification />
+      <Objectives />
+      <InteractiveTour />
       <TheoreticalFramework />
       <Methodology />
       <Scope />
       <Technologies />
       <Benefits />
-      <InteractiveDemo />
       <Conclusion />
     </>
   );

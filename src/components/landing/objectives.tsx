@@ -16,9 +16,9 @@ const Objectives = () => {
 
   return (
     <SectionWrapper id="objetivos" className="scroll-mt-16 bg-muted">
-      <div className="grid gap-12 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <div className="sticky top-24">
+      <div className="grid gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-5">
+          <div className="lg:sticky lg:top-24">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               Objetivos del Proyecto
             </h2>
@@ -27,12 +27,12 @@ const Objectives = () => {
             </p>
           </div>
         </div>
-        <div className="space-y-8 md:col-span-7">
+        <div className="space-y-8 lg:col-span-7">
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-2xl">
-                <Target className="h-8 w-8 text-primary" />
-                Objetivo General
+              <CardTitle className="flex flex-col items-start gap-3 text-2xl sm:flex-row sm:items-center">
+                <Target className="h-8 w-8 flex-shrink-0 text-primary" />
+                <span>Objetivo General</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -43,9 +43,9 @@ const Objectives = () => {
           </Card>
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-2xl">
-                <CheckCircle className="h-8 w-8 text-primary" />
-                Objetivos Específicos
+              <CardTitle className="flex flex-col items-start gap-3 text-2xl sm:flex-row sm:items-center">
+                <CheckCircle className="h-8 w-8 flex-shrink-0 text-primary" />
+                <span>Objetivos Específicos</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -55,7 +55,7 @@ const Objectives = () => {
                     <div className="mt-1.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary">
                       <CheckCircle className="h-3 w-3 text-primary-foreground" />
                     </div>
-                    <span>{objective}</span>
+                    <span className="flex-1">{objective}</span>
                   </li>
                 ))}
               </ul>
