@@ -32,23 +32,23 @@ const InteractiveTour = () => {
               <CarouselItem key={index}>
                 <div className="flex justify-center p-1">
                   <Card className="w-full max-w-4xl overflow-hidden shadow-lg">
-                    <CardContent className="flex flex-col items-center justify-center p-6 text-center md:p-12 min-h-[60vh]">
+                    <CardContent className="flex flex-col items-center justify-center p-6 text-center md:p-12 min-h-[40vh] md:min-h-[60vh]">
                       <div className="mb-6 rounded-full bg-primary/10 p-4 text-primary">
-                        <Icon className="h-10 w-10" />
+                        <Icon className="h-8 w-8 md:h-10 md:w-10" />
                       </div>
 
-                      <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+                      <h2 className="text-2xl font-bold tracking-tight md:text-4xl">
                         {step.title}
                       </h2>
 
                       {step.content && (
-                        <p className="mt-6 max-w-3xl whitespace-pre-line text-lg leading-relaxed text-muted-foreground">
+                        <p className="mt-4 max-w-3xl whitespace-pre-line text-base leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
                           {step.content}
                         </p>
                       )}
 
                       {step.intro && (
-                        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+                        <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mt-6 md:text-lg">
                           {step.intro}
                         </p>
                       )}
@@ -77,18 +77,18 @@ const InteractiveTour = () => {
                         </div>
                       )}
                       {step.conclusion && (
-                        <p className="mt-8 max-w-3xl font-semibold text-foreground">
+                        <p className="mt-8 max-w-3xl font-semibold text-foreground md:text-base">
                           {step.conclusion}
                         </p>
                       )}
 
                       {step.mainGoal && (
-                        <p className="mt-6 max-w-3xl text-xl font-semibold leading-relaxed text-primary">
+                        <p className="mt-4 max-w-3xl text-lg font-semibold leading-relaxed text-primary md:mt-6 md:text-xl">
                           {step.mainGoal}
                         </p>
                       )}
                       {step.subTitle && (
-                        <h3 className="mt-8 text-2xl font-bold">
+                        <h3 className="mt-8 text-xl font-bold md:text-2xl">
                           {step.subTitle}
                         </h3>
                       )}
@@ -107,7 +107,7 @@ const InteractiveTour = () => {
                       )}
 
                       {step.list && (
-                        <ul className="mt-6 w-full max-w-2xl list-inside space-y-3 text-left text-lg text-muted-foreground">
+                        <ul className="mt-6 w-full max-w-2xl list-inside space-y-3 text-left text-base text-muted-foreground md:text-lg">
                           {step.list.map((item, i) => {
                              const ListIcon = step.listIcon;
                              return (
@@ -120,7 +120,7 @@ const InteractiveTour = () => {
                         </ul>
                       )}
                       {step.note && (
-                        <p className="mt-6 max-w-3xl text-sm font-semibold text-muted-foreground">
+                        <p className="mt-6 max-w-3xl text-xs font-semibold text-muted-foreground md:text-sm">
                           {step.note}
                         </p>
                       )}
