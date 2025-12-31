@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
-import Navbar from '@/components/layout/navbar';
-import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'ClinicAI: Clínica Inteligente basada en IA',
@@ -26,11 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body bg-background text-foreground antialiased">
-        <div className="flex min-h-screen flex-col">
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <main>{children}</main>
         <Toaster />
       </body>
     </html>
