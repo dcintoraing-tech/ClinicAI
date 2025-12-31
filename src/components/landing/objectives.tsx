@@ -4,11 +4,14 @@ import { SectionWrapper } from './section-wrapper';
 
 const Objectives = () => {
   const specificObjectives = [
-    'Diseñar una arquitectura de sistema escalable, modular y segura para la gestión de datos clínicos.',
-    'Implementar un modelo de Machine Learning para el análisis sintomático y la asistencia en el pre-diagnóstico.',
-    'Desarrollar una interfaz de usuario intuitiva y accesible para pacientes y personal médico.',
-    'Crear un sistema de triaje automatizado que clasifique a los pacientes según la urgencia de sus síntomas.',
-    'Evaluar la eficacia y precisión del sistema en un entorno de simulación controlado con datos anonimizados.',
+    'Gestionar el registro, seguimiento y control de pacientes, incluyendo citas e historiales clínicos, con el fin de centralizar la información y garantizar continuidad en la atención.',
+    'Gestionar el registro y la identificación de pagos y movimientos financieros relacionados con los tratamientos, permitiendo un control contable claro dentro de la clínica.',
+    'Integrar un sistema de inventario que permita registrar, monitorear y optimizar el stock de insumos odontológicos de acuerdo con la demanda real de los tratamientos.',
+    'Facilitar la comunicación interna entre estudiantes, docentes y personal administrativo, así como la comunicación externa con los pacientes, mediante un módulo de interacción eficiente.',
+    'Establecer un sistema operativo centralizado que coordine de manera organizada los recursos, procesos y roles que intervienen en el funcionamiento clínico.',
+    'Incorporar herramientas de inteligencia artificial para apoyar la toma de decisiones en los procesos clínicos y administrativos, favoreciendo la mejora continua del servicio.',
+    'Analizar los datos clínicos, administrativos y financieros generados por el sistema, con el propósito de obtener indicadores de desempeño e identificar patrones de uso que contribuyan a la evaluación y optimización de la operación clínica.',
+    'Integrar un módulo de machine learning para alertas tempranas, que permita detectar incidencias o desviaciones en los procesos clínicos y administrativos, anticipando fallas y favoreciendo la eficiencia operativa.',
   ];
 
   return (
@@ -34,7 +37,7 @@ const Objectives = () => {
             </CardHeader>
             <CardContent>
               <p className="text-lg text-muted-foreground">
-                Desarrollar e implementar un prototipo de sistema de gestión clínica inteligente (ClinicAI) que utilice algoritmos de inteligencia artificial para optimizar los procesos de diagnóstico preliminar, triaje de pacientes y gestión de recursos hospitalarios.
+                Desarrollar un sistema de información centralizado para la gestión integral de los procesos clínicos, administrativos y operativos de la Clínica Universitaria, que permita optimizar la organización del servicio y fortalecer la calidad de la atención brindada.
               </p>
             </CardContent>
           </Card>
