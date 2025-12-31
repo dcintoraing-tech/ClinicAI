@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import RotateScreen from '@/components/rotate-screen';
 
 export const metadata: Metadata = {
   title: 'ClinicAI: Clínica Inteligente basada en IA',
@@ -24,6 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body bg-background text-foreground antialiased">
+        <RotateScreen />
         <main>{children}</main>
         <Toaster />
       </body>
