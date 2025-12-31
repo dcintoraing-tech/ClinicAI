@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "A modern and clean dentist office.",
-      "imageUrl": "https://images.unsplash.com/photo-1629904993849-48350ba68618?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZW50aXN0JTIwb2ZmaWNlfGVufDB8fHx8MTcyMDc0ODU2OXww&ixlib=rb-4.0.3&q=80&w=1080",
+      "description": "Una moderna y limpia clínica dental.",
+      "imageUrl": "/hero-dental.jpg",
       "imageHint": "dentist office"
     }
   ]
