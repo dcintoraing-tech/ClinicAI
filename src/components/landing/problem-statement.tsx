@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { SectionWrapper } from './section-wrapper';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Clock, ClipboardX, Users, HeartPulse, AlertTriangle } from 'lucide-react';
+import { Clock, ClipboardX, Users, Archive, AlertTriangle, UserMinus } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 
@@ -27,7 +27,7 @@ const problems = [
       'Sobrecarga de los servicios de salud, especialmente en atención primaria, que limita la calidad y el tiempo por paciente.',
   },
   {
-    icon: <HeartPulse className="h-8 w-8 text-primary" />,
+    icon: <UserMinus className="h-8 w-8 text-primary" />,
     title: 'Déficit de Personal',
     description:
       'Escasez de profesionales médicos y de enfermería, lo que aumenta la carga de trabajo del personal existente.',
@@ -37,6 +37,12 @@ const problems = [
     title: 'Errores Humanos',
     description:
       'Fallos en diagnósticos o tratamientos derivados del agotamiento, la falta de información o la complejidad de los casos.',
+  },
+  {
+    icon: <Archive className="h-8 w-8 text-primary" />,
+    title: 'Carga Administrativa Excesiva',
+    description:
+      'El personal dedica gran parte de su tiempo a tareas repetitivas y papeleo, restando tiempo a la atención clínica y la formación.',
   },
 ];
 
@@ -59,7 +65,7 @@ const ProblemStatement = () => {
         {problems.map((problem, index) => (
           <motion.div
             key={index}
-            layoutId={`card-${index}`}
+            layoutId={`card-${problem.title}`}
             onClick={() => setSelectedCard(problem)}
             className="cursor-pointer"
           >
@@ -77,21 +83,20 @@ const ProblemStatement = () => {
       <AnimatePresence>
         {selectedCard && (
           <Dialog open onOpenChange={() => setSelectedCard(null)}>
-            <DialogContent className="p-0 border-0 max-w-md">
+            <DialogContent className="p-0 border-0 max-w-md bg-transparent shadow-none">
+              <motion.div layoutId={`card-${selectedCard.title}`}>
                 <Card className="text-center m-0">
                   <CardHeader className="items-center p-8">
-                    <motion.div
-                      layoutId={`icon-${problems.findIndex((p) => p.title === selectedCard.title)}`}
-                      className="mb-4 rounded-full bg-primary/10 p-4"
-                    >
+                    <div className="mb-4 rounded-full bg-primary/10 p-4">
                       {selectedCard.icon}
-                    </motion.div>
+                    </div>
                     <CardTitle className="text-2xl">{selectedCard.title}</CardTitle>
                     <CardDescription className="pt-4 text-base">
                       {selectedCard.description}
                     </CardDescription>
                   </CardHeader>
                 </Card>
+              </motion.div>
             </DialogContent>
           </Dialog>
         )}
@@ -101,5 +106,3 @@ const ProblemStatement = () => {
 };
 
 export default ProblemStatement;
-
-    
