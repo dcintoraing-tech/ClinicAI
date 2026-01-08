@@ -5,7 +5,6 @@ import { Check, X } from 'lucide-react';
 const Scope = () => {
   const includes = [
     'Módulo de registro y perfil de paciente.',
-    'Sistema de triaje inteligente basado en síntomas.',
     'Herramienta de asistencia al diagnóstico para patologías comunes.',
     'Panel de control (dashboard) para personal médico.',
     'Simulación interactiva del proceso de decisión de la IA.',
