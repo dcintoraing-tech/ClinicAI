@@ -1,5 +1,6 @@
 import { SectionWrapper } from './section-wrapper';
-import { Search, LayoutTemplate, Code, ClipboardCheck, Rocket } from 'lucide-react';
+import { Search, LayoutTemplate, Code, ClipboardCheck, Rocket, FileText } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Methodology = () => {
   const steps = [
@@ -39,6 +40,14 @@ const Methodology = () => {
         <p className="mt-4 text-lg text-muted-foreground">
           Nuestro proyecto se desarrolla siguiendo un enfoque estructurado y por fases para garantizar la calidad y robustez del sistema.
         </p>
+        <div className="mt-6">
+            <Button asChild>
+                <a href="/GC.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className="mr-2" />
+                    Ver Diagrama de Gantt
+                </a>
+            </Button>
+        </div>
       </div>
       <div className="relative mt-12">
         <div

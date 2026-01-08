@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { FileText } from 'lucide-react';
 
 const Header = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-image');
@@ -36,6 +37,14 @@ const Header = () => {
           <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
             <Link href="#objetivos">Leer Más</Link>
           </Button>
+        </div>
+        <div className="mt-4">
+            <Button asChild variant="outline" className="border-white/50 text-white hover:bg-white/10 hover:text-white">
+                <a href="/ttt.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className='mr-2' />
+                    Ver Tesis Completa
+                </a>
+            </Button>
         </div>
       </div>
     </section>
